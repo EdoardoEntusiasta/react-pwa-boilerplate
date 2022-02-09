@@ -3,6 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@craco/craco": "^6.4.3",
+    "@emotion/react": "^11.7.1",
+    "@lingui/react": "^3.13.2",
+    "@mui/material": "^5.4.1",
+    "@mui/styled-engine-sc": "^5.4.1",
+    "@reduxjs/toolkit": "^1.7.2",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
@@ -10,9 +16,16 @@
     "@types/node": "^12.20.43",
     "@types/react": "^16.14.23",
     "@types/react-dom": "^16.9.14",
+    "axios": "^0.25.0",
+    "gsap": "^3.9.1",
+    "light-icons": "^1.0.10",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-gsap": "^3.2.1",
+    "react-redux": "^7.2.6",
+    "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
+    "styled-components": "^5.3.3",
     "typescript": "^4.5.5",
     "web-vitals": "^0.2.4",
     "workbox-background-sync": "^5.1.4",
@@ -29,15 +42,30 @@
     "workbox-streams": "^5.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "NODE_ENV=development craco start",
+    "build": "craco build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public",
+    "add-locale": "lingui add-locale",
+    "extract": "NODE_ENV=development lingui extract --verbose",
+    "compile": "lingui compile"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
     ]
   },
   "browserslist": {
@@ -51,5 +79,23 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.2",
+    "@lingui/cli": "^3.13.2",
+    "@lingui/macro": "^3.13.2",
+    "@storybook/addon-actions": "^6.4.18",
+    "@storybook/addon-essentials": "^6.4.18",
+    "@storybook/addon-links": "^6.4.18",
+    "@storybook/builder-webpack5": "^6.4.18",
+    "@storybook/manager-webpack5": "^6.4.18",
+    "@storybook/node-logger": "^6.4.18",
+    "@storybook/preset-create-react-app": "^4.0.0",
+    "@storybook/react": "^6.4.18",
+    "@types/styled-components": "^5.1.22",
+    "babel-plugin-macros": "^3.1.0",
+    "react-app-rewire-alias": "^1.1.7",
+    "react-app-rewired": "^2.1.11",
+    "webpack": "^5.68.0"
   }
 }

@@ -6,6 +6,26 @@
       "dom.iterable",
       "esnext"
     ],
+    "baseUrl": "src",
+    "paths": {
+      "@core/*": ["core/*"],
+      "@locales/*": ["locales/*"],
+      
+      "@atoms/*": ["components/atoms/*"],
+      "@molecules/*": ["components/molecules/*"],
+      "@organisms/*": ["components/organisms/*"],
+
+      "@mytools/*": ["my_tools/*"],
+      "@stores/*": ["stores/*"],
+
+      "@helpers/*": ["utils/*"],
+      "@pages/*": ["pages/*"],
+      "@utils/*": ["utils/*"],
+      "@hooks/*": ["hooks/*"],
+      "@theme/*": ["theme/*"],
+      "@layouts/*": ["layouts/*"],
+
+    },
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -18,7 +38,9 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "strictPropertyInitialization": false,
+    "noImplicitAny": true
   },
   "include": [
     "src"

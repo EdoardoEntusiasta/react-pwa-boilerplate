@@ -1,25 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from 'react';
 
+import './styles/globals.css'
+
+// Lingui
+import { i18n } from '@lingui/core'
+import { I18nProvider } from '@lingui/react'
+
+import { defaultLocale, dynamicActivate } from '@helpers/i18n';
+
+// Pages
+import IndexPage from '@pages/index/';
+import FetchPage from '@pages/fetch/';
+
+// Router
+import {
+  Routes,
+  Route
+} from "react-router-dom";
+
+
+/**
+ * App
+ * All ROUTES of the app are here
+ * Using react-router v6
+ * https://reactrouter.com/docs/en/v6/getting-started/tutorial
+ */
 function App() {
+
+  useEffect(() => {
+    // With this method we dynamically load the catalogs
+    dynamicActivate(defaultLocale)
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <I18nProvider i18n={i18n}>
+      <div className="App">
+        <Routes>
+          <Route path="/fetch" element={ <FetchPage /> }></Route> 
+          <Route path="/" element={ <IndexPage /> } />
+        </Routes>
+      </div>
+    </I18nProvider>
   );
 }
 
