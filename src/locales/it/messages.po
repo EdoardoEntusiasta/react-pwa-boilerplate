@@ -25,8 +25,7 @@ msgstr "Data di nascita"
 msgid "Boilerplate"
 msgstr ""
 
-#: src/App.tsx:83
-#: src/pages/index.tsx:75
+#: src/pages/index/index.tsx:75
 msgid "Boilerplate intro"
 msgstr "Un boilerplate per iniziare a sviluppare la tua pwa con React, Gsap, e Material-UI"
 
@@ -34,8 +33,7 @@ msgstr "Un boilerplate per iniziare a sviluppare la tua pwa con React, Gsap, e M
 msgid "Certs."
 msgstr "Cert."
 
-#: src/App.tsx:95
-#: src/pages/index.tsx:87
+#: src/pages/index/index.tsx:86
 msgid "Decrement"
 msgstr ""
 
@@ -47,8 +45,7 @@ msgstr ""
 msgid "If you need more info"
 msgstr "Se hai bisogno di più informazioni puoi visitare il repository su github"
 
-#: src/App.tsx:99
-#: src/pages/index.tsx:91
+#: src/pages/index/index.tsx:90
 msgid "Increment"
 msgstr ""
 
@@ -57,8 +54,7 @@ msgstr ""
 msgid "Login"
 msgstr "Entra"
 
-#: src/App.tsx:87
-#: src/pages/index.tsx:79
+#: src/pages/index/index.tsx:79
 msgid "Login modal"
 msgstr "Modale di login"
 
@@ -66,8 +62,7 @@ msgstr "Modale di login"
 msgid "Name"
 msgstr "Nome"
 
-#: src/App.tsx:92
-#: src/pages/index.tsx:84
+#: src/pages/index/index.tsx:83
 msgid "Redux"
 msgstr ""
 
@@ -75,12 +70,10 @@ msgstr ""
 msgid "Surname"
 msgstr "Cognome"
 
-#: src/App.tsx:80
-#: src/pages/index.tsx:72
+#: src/pages/index/index.tsx:72
 msgid "Welcome to boilerplate"
 msgstr "Benvenuti in un boilerplate di Entusiasta"
 
-#: src/App.tsx:85
-#: src/pages/index.tsx:77
+#: src/pages/index/index.tsx:77
 msgid "Wish you good work"
 msgstr "Ti auguro un buon lavoro"

@@ -19,7 +19,7 @@ function Copyright() {
   return (
     <Typography sx={{color: '#DDDDDD'}} variant="body2" color="text.secondary">
       {'Entusiasta: '}
-      <Link color={'inherit'} target="_blank" href="https://github.com/EdoardoEntusiasta/nextjs-pwa-boilerplate">https://github.com/EdoardoEntusiasta/nextjs-pwa-boilerplate</Link>{' '}
+      <Link color={'inherit'} target="_blank" href="https://github.com/EdoardoEntusiasta/react-pwa-boilerplate">https://github.com/EdoardoEntusiasta/react-pwa-boilerplate</Link>{' '}
       {new Date().getFullYear()}
       {'.'}
     </Typography>

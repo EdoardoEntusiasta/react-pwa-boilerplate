@@ -7,7 +7,7 @@ import UserCertificationModel from './UserCertificationModel';
  * This class represents the object obtained through the Users endpoint
  * Methods for property manipulation can be added to this class.
  */
-export class UserModel extends CoreBaseModel {
+export class UserModel extends CoreBaseModel implements IUser {
     
     
     name: any;

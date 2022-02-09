@@ -25,8 +25,7 @@ msgstr "Birth date"
 msgid "Boilerplate"
 msgstr ""
 
-#: src/App.tsx:83
-#: src/pages/index.tsx:75
+#: src/pages/index/index.tsx:75
 msgid "Boilerplate intro"
 msgstr "A boilerplate to get started developing your progressive web app with React, Gsap, and Material-UI"
 
@@ -34,8 +33,7 @@ msgstr "A boilerplate to get started developing your progressive web app with Re
 msgid "Certs."
 msgstr "Certs."
 
-#: src/App.tsx:95
-#: src/pages/index.tsx:87
+#: src/pages/index/index.tsx:86
 msgid "Decrement"
 msgstr ""
 
@@ -47,8 +45,7 @@ msgstr ""
 msgid "If you need more info"
 msgstr "If you need more information you can visit the github repo"
 
-#: src/App.tsx:99
-#: src/pages/index.tsx:91
+#: src/pages/index/index.tsx:90
 msgid "Increment"
 msgstr ""
 
@@ -57,8 +54,7 @@ msgstr ""
 msgid "Login"
 msgstr ""
 
-#: src/App.tsx:87
-#: src/pages/index.tsx:79
+#: src/pages/index/index.tsx:79
 msgid "Login modal"
 msgstr "Login modal"
 
@@ -66,8 +62,7 @@ msgstr "Login modal"
 msgid "Name"
 msgstr "Name"
 
-#: src/App.tsx:92
-#: src/pages/index.tsx:84
+#: src/pages/index/index.tsx:83
 msgid "Redux"
 msgstr ""
 
@@ -75,12 +70,10 @@ msgstr ""
 msgid "Surname"
 msgstr "Surname"
 
-#: src/App.tsx:80
-#: src/pages/index.tsx:72
+#: src/pages/index/index.tsx:72
 msgid "Welcome to boilerplate"
 msgstr "Welcome to an Entusiasta's boilerplate"
 
-#: src/App.tsx:85
-#: src/pages/index.tsx:77
+#: src/pages/index/index.tsx:77
 msgid "Wish you good work"
 msgstr "Wish you a good work"
