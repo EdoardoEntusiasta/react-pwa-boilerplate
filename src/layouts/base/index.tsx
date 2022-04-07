@@ -47,6 +47,8 @@ const LayoutBase = ({ children }: any) => {
           </Typography>
           <TextLink href="">Home</TextLink>
           &nbsp;&nbsp;&nbsp;
+          <TextLink href="login">Login</TextLink>
+          &nbsp;&nbsp;&nbsp;
           <TextLink href="fetch">Fetch</TextLink>
         </Toolbar>
       </StyledBar>
