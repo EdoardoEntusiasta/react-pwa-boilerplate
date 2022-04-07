@@ -1,6 +1,8 @@
+
+
+
 import { CoreBaseModel } from '@core/models/Base.model';
-import { IUser } from '@mytools/interfaces/IUser';
-import UserCertificationModel from './UserCertificationModel';
+import { IUser } from '@interfaces/IUser';
 
 /**
  * Example model class
@@ -10,10 +12,9 @@ import UserCertificationModel from './UserCertificationModel';
 export class UserModel extends CoreBaseModel implements IUser {
     
     
-    name: any;
-    surname: any;
-    birthdate: any;
-    certifications: any;
+    name: string;
+    surname: string;
+    birthdate: string;
 
 
     constructor(data: any) {
@@ -37,31 +38,26 @@ export class UserModel extends CoreBaseModel implements IUser {
      * These items will be instantiated following the associated reference models in the following array
      * In this example, the certifications object of the User object will be an instance of the UserCertificationsModel
      */
+    /*
     static getSubTypesList() {
         return [
             { object: 'certifications', model: UserCertificationModel },
         ];
     }
+    */
 
 
     /**
      * In this example method we see how to get the age from the birthdate contained in the User object
      * @returns 
      */
-    getAge() {
-        var today = new Date();
-        var birthDate = new Date(this.birthdate);
-        var age = today.getFullYear() - birthDate.getFullYear();
-        var m = today.getMonth() - birthDate.getMonth();
-        if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-            age--;
-        }
-        return age;
+    getAge(): string {
+        return 'a';
     }
 
-    totalCerts() {
-        console.log(this);
-        return this.certifications.length;
+    totalCerts(): number {
+        return 3;
+        // return this.certifications.length;
     }
 
 }

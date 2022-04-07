@@ -23,8 +23,8 @@ import { gsap } from "gsap";
 import Modal from '@molecules/Modal';
 
 // Drafts
-import LoginForm from '@mytools/components/LoginForm';
-import { UsersService } from '@mytools/services/UserService';
+import LoginFormHolder from '@organisms/LoginFormHolder';
+import { UsersService } from '@services/UserService';
 
 // Redux
 import { useSelector, useDispatch } from 'react-redux'
@@ -63,7 +63,7 @@ const IndexPage = () => {
     <>
     {/* @ts-ignore */}
     <Modal open={modalOpen} set_open={setModalOpen}>
-      <LoginForm></LoginForm>
+      <LoginFormHolder/>
     </Modal>
     <LayoutBase>
       <div ref={textRef}>

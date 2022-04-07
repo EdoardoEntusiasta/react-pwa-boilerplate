@@ -1,7 +1,7 @@
 import { CoreBaseService } from '@core/services/Base.service';
 
 // Reference model
-import { UserModel } from '@mytools/models/UserModel';
+import { UserModel } from '@models/UserModel';
 
 /**
  * An example of service

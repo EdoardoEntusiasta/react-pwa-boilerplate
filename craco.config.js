@@ -15,6 +15,11 @@ module.exports = {
       "@mytools": path.resolve(__dirname, 'src/my_tools'),
       "@pages": path.resolve(__dirname, 'src/pages'),
 
+      "@models": path.resolve(__dirname, 'src/models'),
+      "@interfaces": path.resolve(__dirname, 'src/interfaces'),
+      "@services": path.resolve(__dirname, 'src/services'),
+      "@appTypes": path.resolve(__dirname, 'src/types'),
+      "@validation": path.resolve(__dirname, 'src/validation'),
       "@helpers": path.resolve(__dirname, 'src/utils'),
       "@utils": path.resolve(__dirname, 'src/utils'),
       "@hooks": path.resolve(__dirname, 'src/hooks'),

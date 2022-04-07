@@ -1,6 +1,6 @@
-import { useEffect } from 'react';
-
 import './styles/globals.css'
+
+import { useMount } from '@hooks';
 
 // Lingui
 import { i18n } from '@lingui/core'
@@ -11,6 +11,16 @@ import { defaultLocale, dynamicActivate } from '@helpers/i18n';
 // Pages
 import IndexPage from '@pages/index/';
 import FetchPage from '@pages/fetch/';
+import LoginPage from '@pages/login/';
+
+import PrivateRoutes from '@layouts/private';
+import PublicRoutes from '@layouts/public';
+
+import { useAppDispatch } from '@stores/hooks';
+import { LOCAL_STORAGE_KEYS } from '@utils/constants';
+import LocalStorageManager from '@utils/LocalStorageManager';
+
+import { checkAuth } from '@stores/reducers/authReducer';
 
 // Router
 import {
@@ -27,17 +37,27 @@ import {
  */
 function App() {
 
-  useEffect(() => {
+  const dispatch = useAppDispatch();
+
+  useMount(() => {
+    const locale = LocalStorageManager.getItem(LOCAL_STORAGE_KEYS.LOCALE);
+
     // With this method we dynamically load the catalogs
-    dynamicActivate(defaultLocale)
-  }, [])
+    dynamicActivate(locale || defaultLocale, !locale);
+    dispatch(checkAuth());
+  });
 
   return (
     <I18nProvider i18n={i18n}>
       <div className="App">
         <Routes>
-          <Route path="/fetch" element={ <FetchPage /> }></Route> 
+        <Route element={<PrivateRoutes />}>
+          <Route path="/fetch" element={ <FetchPage /> }></Route>
+        </Route>
+        <Route element={<PublicRoutes />}>
           <Route path="/" element={ <IndexPage /> } />
+          <Route path="/login" element={ <LoginPage /> } />
+        </Route>
         </Routes>
       </div>
     </I18nProvider>

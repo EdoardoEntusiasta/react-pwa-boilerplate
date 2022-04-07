@@ -1,4 +1,8 @@
 
+export const COLORS = {
+    white: '#FFFFFF'
+}
+
 export const primary = {
     base: '#000FF5',
     light: '#00A0FF',

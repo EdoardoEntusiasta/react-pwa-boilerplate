@@ -6,6 +6,7 @@ Babel
 React
 Typescript
 styled-components
+redux
 tsconfig-paths-webpack-plugin (for Storybook)
 https://icons.lightvue.org/icons
 

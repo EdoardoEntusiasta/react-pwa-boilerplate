@@ -23,9 +23,9 @@ import LayoutBase from 'layouts/base/';
 
 
 // Drafts
-import { UsersService } from '@mytools/services/UserService';
+import { UsersService } from '@services/UserService';
 import { CoreResponseModel } from '@core/models/Response.model';
-import { UserModel } from '@mytools/models/UserModel';
+import { UserModel } from '@models/UserModel';
 
 
 const Blog = () => {

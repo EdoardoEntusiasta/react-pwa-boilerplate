@@ -17,7 +17,12 @@
 
       "@mytools/*": ["my_tools/*"],
       "@stores/*": ["stores/*"],
-
+      "@models/*": ["models/*"],
+      "@appTypes/*": ["types/*"],
+      "@interfaces/*": ["interfaces/*"],  
+      "@services/*": ["services/*"],
+      "@validation/*": ["validation/*"],
+      "@hooks": ["hooks"],
       "@helpers/*": ["utils/*"],
       "@pages/*": ["pages/*"],
       "@utils/*": ["utils/*"],

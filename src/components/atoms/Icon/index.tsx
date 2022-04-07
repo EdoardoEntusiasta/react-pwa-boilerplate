@@ -1,8 +1,5 @@
 /** 
- * For this component I have to thank two smart guys 
- * Jacopo Panzera https://github.com/Sliver02
- * and 
- * Andrea Caccia 
+ * credits in CREDITS.txt
  */
 
 import { StyledIcon } from './styled';
