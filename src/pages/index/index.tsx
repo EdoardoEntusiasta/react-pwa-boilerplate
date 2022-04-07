@@ -48,13 +48,13 @@ const IndexPage = () => {
     gsap.fromTo(
       textRef.current,
         {
-            opacity: 0,
-            y: '40px'
+          opacity: 0,
+          y: '40px'
         },
         {
-            opacity: 1,
-            y: 0,
-            duration: 2,
+          opacity: 1,
+          y: 0,
+          duration: 2,
         }
     );
   }, []);

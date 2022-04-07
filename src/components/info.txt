@@ -1,0 +1,3 @@
+
+Components are organized according to atomic design
+https://atomicdesign.bradfrost.com/chapter-2/

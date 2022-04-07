@@ -5,14 +5,10 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import Toolbar from '@mui/material/Toolbar';
-
 import IconButton from '@mui/material/IconButton';
-
 import { StyledBar } from './styled';
 import { Trans } from '@lingui/macro';
 import TextLink from '@atoms/TextLink';
-
-
 
 
 function Copyright() {
@@ -31,28 +27,30 @@ const LayoutBase = ({ children }: any) => {
 
   return (
     <>
-    <Box sx={{ flexGrow: 1 }}>
-      <StyledBar>
-        <Toolbar>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-          >
-          </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            <Trans>Boilerplate</Trans>
-          </Typography>
-          <TextLink href="">Home</TextLink>
-          &nbsp;&nbsp;&nbsp;
-          <TextLink href="login">Login</TextLink>
-          &nbsp;&nbsp;&nbsp;
-          <TextLink href="fetch">Fetch</TextLink>
-        </Toolbar>
-      </StyledBar>
-    </Box>
+      <Box sx={{ flexGrow: 1 }}>
+        <StyledBar>
+          <Toolbar>
+            <IconButton
+              size="large"
+              edge="start"
+              color="inherit"
+              aria-label="menu"
+              sx={{ mr: 2 }}
+            >
+            </IconButton>
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+              <Trans>
+                <TextLink href="">Boilerplate</TextLink>
+              </Trans>
+            </Typography>
+            <TextLink href="">Home</TextLink>
+            &nbsp;&nbsp;&nbsp;
+            <TextLink href="login">Login</TextLink>
+            &nbsp;&nbsp;&nbsp;
+            <TextLink href="fetch">Fetch</TextLink>
+          </Toolbar>
+        </StyledBar>
+      </Box>
       <Box
       sx={{
         display: 'flex',
@@ -83,7 +81,7 @@ const LayoutBase = ({ children }: any) => {
           </Container>
         </Box>
       </Box>
-      </>
+    </>
   )
 }
 

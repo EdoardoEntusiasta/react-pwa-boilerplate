@@ -11,7 +11,7 @@ This boilerplate has grown thanks to the work of:
 ## Getting Started
 The package is made of:
 
-Webpack 5.68, Storybook, material-ui, Babel, React, Typescript, Redux gsap, styled-components, i18n, lingui
+Webpack 5.68, react-hook-form, Storybook, material-ui, Babel, React, Typescript, Redux gsap, styled-components, i18n, lingui
 
 First, run the development server:
 
