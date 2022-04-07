@@ -5,6 +5,8 @@ import AuthService from '@services/AuthService';
 import { LOCAL_STORAGE_KEYS } from '@utils/constants';
 import LocalStorageManager from '@utils/LocalStorageManager';
 import { CoreResponseModel } from '@core/models/Response.model';
+import axios from 'axios';
+import { AuthModel } from '@models/AuthModel';
 
 interface IAuthState {
   isLoading: boolean;
@@ -54,10 +56,12 @@ export const authReducer = createSlice({
   initialState,
   reducers: {
     checkAuth: (state) => {
-      const user: IUser = LocalStorageManager.getItem(LOCAL_STORAGE_KEYS.USER);
+      const user: IUser = new AuthModel(LocalStorageManager.getItem(LOCAL_STORAGE_KEYS.USER));
 
       if (user) {
         state.user = user;
+        const tokenName = process.env.REACT_APP_TOKEN_HEADER_NAME ? process.env.REACT_APP_TOKEN_HEADER_NAME : 'token';
+        axios.defaults.headers.common[tokenName] = user.token as string;
       }
     },
     resetAuthStore: (state) => {
@@ -65,6 +69,8 @@ export const authReducer = createSlice({
       state.user = null;
       state.error = null;
       LocalStorageManager.removeItem(LOCAL_STORAGE_KEYS.USER);
+      const tokenName = process.env.REACT_APP_TOKEN_HEADER_NAME ? process.env.REACT_APP_TOKEN_HEADER_NAME : 'token';
+      axios.defaults.headers.common[tokenName] = '';
     },
   },
   extraReducers: (builder) => {

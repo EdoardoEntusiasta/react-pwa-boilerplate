@@ -12,6 +12,15 @@ export class AuthModel extends CoreBaseModel implements IUser {
   birthdate?: string;
   jwt?: string; // Used
 
+  /**
+   * This is used by the authentication system.
+   * You can change it according to your properties, but it is not recommended to change it.
+   * @returns boolean
+   */
+  get token(): string | undefined {
+    return this.jwt;
+  }
+
   constructor(data: any) {
     super();
     if (data) {

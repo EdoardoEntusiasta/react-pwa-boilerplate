@@ -4,4 +4,5 @@ export interface IUser {
   surname?: string;
   birthdate?: string;
   sessionID?: string;
+  readonly token?: string | undefined;
 }
