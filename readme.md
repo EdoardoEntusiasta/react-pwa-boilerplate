@@ -5,7 +5,7 @@ This boilerplate has grown thanks to the work of:
 - Jacopo Panzera (https://github.com/Sliver02)
 - Andrea Caccia
 - Sebastiano Edoardo Casella (https://github.com/EdoardoEntusiasta)
-- Shant Sargsyan (https://github.com/Shant24
+- Shant Sargsyan (https://github.com/Shant24)
 
 
 ## Getting Started
