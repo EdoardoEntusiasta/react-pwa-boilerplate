@@ -2,6 +2,9 @@ import './styles/globals.css'
 
 import { useMount } from '@hooks';
 
+// Axios
+import axios from 'axios';
+
 // Lingui
 import { i18n } from '@lingui/core'
 import { I18nProvider } from '@lingui/react'
@@ -22,12 +25,19 @@ import LocalStorageManager from '@utils/LocalStorageManager';
 
 import { checkAuth } from '@stores/reducers/authReducer';
 
+// Axios interceptors
+import { setupInterceptors } from '@utils/interceptors';
+
 // Router
 import {
   Routes,
   Route
 } from "react-router-dom";
 
+// Theme
+import { ThemeProvider, CssBaseline } from '@mui/material';
+import theme  from '@theme/MuiTheme';
+import { useEffect } from 'react';
 
 /**
  * App
@@ -46,21 +56,27 @@ function App() {
     dynamicActivate(locale || defaultLocale, !locale);
     dispatch(checkAuth());
   });
+  
+  useEffect(() => {
+    setupInterceptors();
+  }, [])
 
   return (
-    <I18nProvider i18n={i18n}>
-      <div className="App">
-        <Routes>
-        <Route element={<PrivateRoutes />}>
-          <Route path="/fetch" element={ <FetchPage /> }></Route>
-        </Route>
-        <Route element={<PublicRoutes />}>
-          <Route path="/" element={ <IndexPage /> } />
-          <Route path="/login" element={ <LoginPage /> } />
-        </Route>
-        </Routes>
-      </div>
-    </I18nProvider>
+    <ThemeProvider theme={theme}>
+      <I18nProvider i18n={i18n}>
+        <div className="App">
+          <Routes>
+            <Route element={<PrivateRoutes />}>
+              <Route path="/fetch" element={ <FetchPage /> }></Route>
+            </Route>
+            <Route element={<PublicRoutes />}>
+              <Route path="/" element={ <IndexPage /> } />
+              <Route path="/login" element={ <LoginPage /> } />
+            </Route>
+          </Routes>
+        </div>
+      </I18nProvider>
+    </ThemeProvider>
   );
 }
 

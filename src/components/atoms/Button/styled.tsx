@@ -1,7 +1,7 @@
-import styled, { css } from 'styled-components';
 import Button from '@mui/material/Button';
+import { styled } from '@mui/system';
 
 
-export const StyledButton = styled(Button)`
-  ${(props:any) => !!props.margin && `margin: ${props.margin}px };`}
-`;
+export const StyledButton = styled(Button)(({ theme }) => ({
+  padding: theme.spacing(1)
+}));
